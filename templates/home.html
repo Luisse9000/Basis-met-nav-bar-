@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SelfCraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa; /* Light background */
+        color: #343a40; /* Dark text */
+        }
+        .container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: #ffffff;
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+        color: #495057;
+        margin-bottom: 20px;
+        }
+        h2 {
+        color: #6c757d;
+        margin-top: 30px;
+        }
+        .welcome-message {
+        text-align: center;
+        margin-bottom: 40px;
+        }
+        .featured-projects {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 40px;
+        }
+        .featured-item {
+        flex: 1 1 calc(33.33% - 20px);
+        background: #f8f9fa;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        }
+        .featured-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        }
+    </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <div class="welcome-message">
+        <h1>Welcome to SelfCraft!</h1>
+        <p>Your platform for creating, uploading, and connecting your custom designs with skilled manufacturers to bring them to life.</p>
+        </div>
+
+        <h2>Popular Projects</h2>
+        <p>Check out some of the amazing designs shared by our talented community:</p>
+        <div class="featured-projects">
+        <div class="featured-item">
+            <img src="https://via.placeholder.com/300x200" alt="Custom Wooden Table">
+            <h3>Custom Wooden Table</h3>
+            <p>This beautiful wooden table was designed by a customer and crafted by a skilled producer.</p>
+        </div>
+        <div class="featured-item">
+            <img src="https://via.placeholder.com/300x200" alt="Wooden Shelf Design">
+            <h3>Custom Wooden Shelf</h3>
+            <p>A custom wooden shelf made from reclaimed wood, designed to fit any space.</p>
+        </div>
+        <div class="featured-item">
+            <img src="https://via.placeholder.com/300x200" alt="Wooden Chair Design">
+            <h3>Custom Wooden Chair</h3>
+            <p>This custom chair was created to provide comfort and style for any home.</p>
+        </div>
+        </div>
+    </div>
+
+    </body>
+    </html>
+
+{% endblock %}

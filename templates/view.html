@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}View All Users{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Client Folder</h1>
+        <p>Below is the list of all registered users:</p>
+
+        <!-- Check if there are any users to display -->
+        {% if values %}
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through each user and display their data -->
+                    {% for item in values %}
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.email }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No users found.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block styles %}
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #264653;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+        }
+
+        .user-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+
+        .user-table th, .user-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .user-table th {
+            background-color: #264653;
+            color: white;
+        }
+
+        /* Increase space between columns by setting column width */
+        .user-table td:nth-child(1), .user-table th:nth-child(1) {
+            width: 40%; /* Adjust percentage as needed */
+        }
+
+        .user-table td:nth-child(2), .user-table th:nth-child(2) {
+            width: 60%; /* Adjust percentage as needed */
+        }
+
+        .user-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .user-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+{% endblock %}
